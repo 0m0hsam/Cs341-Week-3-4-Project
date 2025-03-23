@@ -1,0 +1,36 @@
+### Get All Students
+GET http://localhost:3000/student HTTP/1.1
+
+### Get Student by ID
+GET http://localhost:3000/student/67df8311296b41cc2cf3b857 HTTP/1.1
+
+### Create Student
+POST http://localhost:3000/student HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Favour",
+    "lastName": "Jonathan",
+    "gender": "Female",
+    "phoneNumber": "08012345678",
+    "email": "fjonathan@byupathway.com",
+    "degree": "Bsc",
+    "school": "Ensign College"
+}
+
+### Update Student
+PUT http://localhost:3000/student/67df8311296b41cc2cf3b857 HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "Favour",
+    "lastName": "Jonathan",
+    "gender": "Female",
+    "phoneNumber": "08012345678",
+    "email": "fjonathan@byupathway.com",
+    "degree": "Bsc",
+    "school": "Ensign College"
+}
+
+### Delete Student
+DELETE http://localhost:3000/student/67df99fe812530be3ad7a0a3 HTTP/1.1
