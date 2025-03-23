@@ -1,5 +1,5 @@
 ### Get All Students
-GET http://localhost:3000/student HTTP/1.1
+GET http://localhost:8080/student HTTP/1.1
 
 ### Get Student by ID
 GET http://localhost:3000/student/67df8311296b41cc2cf3b857 HTTP/1.1
