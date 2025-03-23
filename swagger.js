@@ -6,10 +6,11 @@ const doc = {
     description: "Description of my API",
   },
   host: "localhost:8080",
-  schemes: ["http"],
+  schemes: ["http", "https"],
+  consumes: ["application/json"],
 };
 
-const outputFile = "./swagger-output.json";
+const outputFile = "./swagger.json";
 const endpointsFiles = ["./routes/index.js"];
 
 // generate swagger.json
