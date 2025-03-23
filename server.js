@@ -11,7 +11,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 dotenv.config();
 
-const port = process.env.PORT || 3000; // Use environment variable for port
+const port = process.env.PORT || 8080; // Use environment variable for port
 
 // Middleware
 app.use(bodyParser.json()); // Parse JSON bodies

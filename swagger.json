@@ -5,10 +5,9 @@
     "description": "Description of my API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "localhost:8080",
   "basePath": "/",
   "schemes": [
-    "https",
     "http"
   ],
   "paths": {
