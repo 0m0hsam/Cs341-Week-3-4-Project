@@ -15,6 +15,7 @@ const port = process.env.PORT || 8080; // Use environment variable for port
 // Middleware
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json()); // Parse JSON bodies
+app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
