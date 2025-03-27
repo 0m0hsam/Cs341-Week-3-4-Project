@@ -34,3 +34,43 @@ Content-Type: application/json
 
 ### Delete Student
 DELETE http://localhost:3000/student/67df99fe812530be3ad7a0a3 HTTP/1.1
+
+
+####Creating grade project with the following endpoints
+### Get All Grades
+GET http://localhost:8080/grade HTTP/1.1
+
+### Get Grade by ID
+GET http://localhost:8080/grade/67df8311296b41cc2cf3b857 HTTP/1.1
+
+### Create Grade
+POST http://localhost:8080/grade HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentName": "David Jonathan",
+    "grade": "A-",
+    "course": "CS341",
+    "email": "djonathan@byupathway.edu",
+    "grader": "Jeremy Buell",
+    "instructor": "Jeremy Lindsey"
+}
+
+### Update Grade
+PUT http://localhost:8080/grade/67e4f17f53efa35e13a6fa38 HTTP/1.1
+Content-Type: application/json
+
+{
+    "studentName": "David A. Jonathan",
+    "grade": "A-",
+    "course": "WEB130",
+    "email": "djonathan@byupathway.edu",
+    "grader": "Jeremy Buell",
+    "instructor": "Jeremy Lindsey"
+}
+
+
+
+
+### Delete Grade
+DELETE   http://localhost:8080/grade/67e4f07ef2f3a8ab32cd55c5 HTTP/1.1   
