@@ -5,7 +5,7 @@
     "description": "Description of my API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cs341-week-3-4-project.onrender.com",
   "basePath": "/",
   "schemes": [
     "http",

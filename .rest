@@ -6,7 +6,7 @@ GET http://localhost:8080/student/67db989208ad62bc222c7015 HTTP/1.1
 
 
 ###login user
-GET http://localhost:8080/profile HTTP/1.1
+GET http://localhost:8080/login HTTP/1.1
 
 
 ### Create Student
