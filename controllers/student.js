@@ -9,6 +9,7 @@ const getAll = async (req, res) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(profile);
   } catch (error) {
+    console.error("Error fetching profiles:", error);
     res
       .status(500)
       .json({ error: "Something went wrong with fetching the profiles" });
@@ -89,8 +90,13 @@ const updateStudent = [
       return res.status(400).json({ errors: errors.array() });
     }
 
+    // Validate the ObjectId
+    if (!ObjectId.isValid(req.params.id)) {
+      return res.status(400).json({ error: "Invalid ID format" });
+    }
+
     try {
-      const userid = new ObjectId(req.params.id);
+      const userid = new ObjectId(req.params.id); // Convert id to ObjectId
       const user = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -107,11 +113,10 @@ const updateStudent = [
       if (result.modifiedCount > 0) {
         res.status(200).json({ message: "updated successfully" });
       } else {
-        res.status(500).json({
-          error: "Something went wrong with updating the student profile",
-        });
+        res.status(404).json({ error: "Student not found" });
       }
     } catch (error) {
+      console.error("Error updating student:", error);
       res.status(500).json({
         error: "Something went wrong with updating the student profile",
       });
